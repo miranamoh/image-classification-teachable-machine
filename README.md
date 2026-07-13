@@ -17,9 +17,9 @@ This Task demonstrates training an image classification model using **Google's T
 .
 ├── keras_model.h5      # Trained model exported from Teachable Machine
 ├── labels.txt           # Class labels (Class 0: Cat, Class 1: Dog)
-├── predict.py            # Python script that loads the model and predicts on an image
+├──  outputP.png         # Screenshot of the script output (class + confidence score)
+├── predict.py         # Python script that loads the model and predicts on an image
 ├── test1.png        # Sample test image used for evaluation
-├── outputP.png         # Screenshot of the script output (class + confidence score)
 └── README.md
 ```
 
