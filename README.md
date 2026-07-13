@@ -1,8 +1,8 @@
 # image-classification-teachable-machine
 Cat vs Dog image classifier built with Teachable Machine, exported as Keras model, with a Python prediction script.
-# Image Recognition Model with Teachable Machine
+# Task: Image Recognition Model with Teachable Machine
 
-This project demonstrates training an image classification model using **Google's Teachable Machine**, exporting it in TensorFlow (Keras) format, and running predictions with a Python script.
+This Task demonstrates training an image classification model using **Google's Teachable Machine**, exporting it in TensorFlow (Keras) format, and running predictions with a Python script.
 
 ## Overview
 
