@@ -36,12 +36,16 @@ This Task demonstrates training an image classification model using **Google's T
 ## Script Summary (`predict.py`)
 
 ```python
-from keras.models import load_model
-from PIL import Image, ImageOps
+from keras.models import load_model  # TensorFlow is required for Keras to work
+from PIL import Image, ImageOps  # Install pillow instead of PIL
 import numpy as np
+import tf_keras as tk
+
+# Disable scientific notation for clarity
+np.set_printoptions(suppress=True)
 
 # Load the model
-model = load_model("keras_model.h5", compile=False)
+model = tk.models.load_model("keras_model.h5", compile=False)
 
 # Load the labels
 class_names = open("labels.txt", "r").readlines()
@@ -49,8 +53,8 @@ class_names = open("labels.txt", "r").readlines()
 # Prepare the image array
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
-# Load and preprocess the image
-image = Image.open("test_image.png").convert("RGB")
+# Load and preprocess the image (replace with the path to your image)
+image = Image.open("test1.png").convert("RGB")
 size = (224, 224)
 image = ImageOps.fit(image, size, Image.Resampling.LANCZOS)
 image_array = np.asarray(image)
@@ -68,6 +72,7 @@ confidence_score = prediction[0][index]
 print("Class:", class_name[2:], end="")
 print("Confidence Score:", confidence_score)
 ```
+> **Note:** The original script (`predict.py`) was generated from a Google Colab notebook and includes Colab-specific lines (`from google.colab import files` and `uploaded = files.upload()`) used to upload the test image interactively. These lines only work inside Google Colab — if running the script locally, remove them and simply place the test image in the same folder as the script.
 
 ## Sample Output
 
@@ -84,13 +89,14 @@ A screenshot of this output is included in the repository (`outputP.png`).
 
 ```
 tensorflow
+tf_keras
 pillow
 numpy
 ```
 
 Install with:
 ```bash
-pip install tensorflow pillow numpy
+pip install tensorflow tf_keras pillow numpy
 ```
 
 ## How to Run
