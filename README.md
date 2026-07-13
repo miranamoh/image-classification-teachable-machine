@@ -79,7 +79,7 @@ print("Confidence Score:", confidence_score)
 Tested on a sample image of a cat:
 
 ```
-Class 2: Cat
+Class: Cat
 Confidence Score: 0.99967897
 ```
 
